@@ -1,0 +1,96 @@
+.user_form {
+    width: calc(100% - 40px);
+    max-width: 930px;
+    margin: 0 auto 24px;
+    padding: 20px;
+    font-family: sans-serif;
+    color: #111827;
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    border-radius: 8px;
+    box-shadow: 0 1px 5px rgb(0 0 0 / 12%);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.user_form h2 {
+    margin: 0 0 8px;
+    color: #111827;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.user_form form {
+    display: grid;
+    gap: 14px;
+}
+
+.user_form__field {
+    display: grid;
+    gap: 7px;
+}
+
+.user_form__field input,
+.user_form__field select {
+    width: 100%;
+    height: 33px;
+    padding: 6px 9px;
+    box-sizing: border-box;
+    border: 1px solid #d5d5d5;
+    border-radius: 4px;
+    background: #fff;
+    color: #111827;
+    font: inherit;
+    font-size: 13px;
+}
+
+.user_form__field label {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.user_form__checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 0;
+    color: #5f6f89;
+    text-align: left;
+    font-size: 13px;
+}
+
+.user_form__checkbox input {
+    width: auto;
+}
+
+.user_form button {
+    min-height: 36px;
+    padding: 8px 12px;
+    border: 0;
+    border-radius: 4px;
+    background: #087cf0;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.user_form button:disabled {
+    cursor: wait;
+    opacity: 0.7;
+}
+
+.user_form__error {
+    color: red;
+}
+
+.user_form__success {
+    color: green;
+}
+
+@media (max-width: 600px) {
+    .user_form {
+        width: calc(100% - 20px);
+        padding: 16px 12px;
+    }
+}
