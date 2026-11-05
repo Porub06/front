@@ -23,32 +23,13 @@ export default function TermekLista() {
         fetchData();
     }, []);
 
-    const errorstyle = {
-        color: 'red',
-        fontWeight: 'bold',
-        backgroundColor: '#ffe6e6',
-        border: '1px solid red',
-    };
-
-    const loadingStyle = {
-        width: '70%',
-        margin: '20px auto',
-        padding: '10px',
-        textAlign: 'center',
-        border: '1px solid blue',
-
-        color: 'blue',
-        fontWeight: 'bold',
-        backgroundColor: '#e6f0ff',
-    };
-
     return (
         <div>
-            <h2>Termékek</h2>
-            {loading && <p style={loadingStyle}>Adatok betöltése...</p>}
-            {error && <p style={errorstyle}>Hiba történt: {error.message}</p>}
+            <h1 className="page-title">Termékek</h1>
+            {loading && <p className="product-state" role="status">Adatok betöltése...</p>}
+            {error && <p className="product-state product-state--error" role="alert">Hiba történt: {error.message}</p>}
             {!loading && !error && (
-                <div>
+                <div className="product-list">
                     {termekLista.map((termek) => (
                         <TermekKartya key={termek.id} termek={termek} />
                     ))}

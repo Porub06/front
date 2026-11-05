@@ -1,9 +1,11 @@
 export default function TermekKartya({ termek }) {
     return (
-        <div>
+        <article className="product-card">
             <h3>{termek.nev}</h3>
-            <p>Ár: {termek.ar} Ft</p>
-            <p>Készlet: {termek.keszlet}</p>
-        </div>
+            <div className="product-card__details">
+                <p className="product-card__price">{termek.ar} Ft</p>
+                <span className="product-card__stock">Készlet: {termek.keszlet}</span>
+            </div>
+        </article>
     );
 }
